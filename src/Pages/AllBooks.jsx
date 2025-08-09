@@ -86,9 +86,9 @@ const AllBooks = () => {
         </div>
       ) : (
         <div className="overflow-x-auto">
-          <table className="table table-zebra w-full">
+          <table className="table  w-full">
             <thead>
-              <tr>
+              <tr className="text-black">
                 <th>Image</th>
                 <th>Name</th>
                 <th>Author</th>

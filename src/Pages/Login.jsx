@@ -54,14 +54,14 @@ const Login = () => {
               type="email"
               name="email"
               ref={emailRef}
-              className="input"
+              className="input text-white"
               placeholder="Email"
             />
             <label className="label">Password</label>
             <input
               type="password"
               name="password"
-              className="input"
+              className="input text-white"
               placeholder="Password"
             />
             <div>
@@ -88,7 +88,7 @@ const Login = () => {
 
             <p className="font-semibold text-center my-2 text-sm">
               Don’t have any account?{" "}
-              <Link  className="text-secondary" to="/auth/register">
+              <Link  className="text-black" to="/auth/register">
                 Register
               </Link>
             </p>

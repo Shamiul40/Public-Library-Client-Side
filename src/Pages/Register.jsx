@@ -64,7 +64,7 @@ const Register = () => {
 
   return (
     <div className="flex justify-center my-10">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="card bg-base-100  text-white w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <h2 className="text-xl font-semibold text-center">Register</h2>
           <form onSubmit={handleRegister} className="space-y-3">
@@ -105,7 +105,7 @@ const Register = () => {
               Continue with Google
             </button>
             <p className="text-sm mt-3">
-              Already have an account? <Link to="/auth/login" className="text-blue-600">Login</Link>
+              Already have an account? <Link to="/auth/login" className=" text-white  ">Login</Link>
             </p>
           </div>
         </div>

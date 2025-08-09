@@ -45,9 +45,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="card  w-full max-w-sm shrink-0 shadow-2xl ">
-        <div className="card-body">
+    <div className="flex justify-center my-8">
+      <div className="card  w-full max-w-sm shrink-0  shadow-2xl ">
+        <div className="card-body bg-base-100 rounded-lg text-white">
           <form onSubmit={handleLogin} className="fieldset">
             <label className="label">Email</label>
             <input
@@ -88,7 +88,7 @@ const Login = () => {
 
             <p className="font-semibold text-center my-2 text-sm">
               Don’t have any account?{" "}
-              <Link  className="text-black" to="/auth/register">
+              <Link  className="text-white" to="/auth/register">
                 Register
               </Link>
             </p>

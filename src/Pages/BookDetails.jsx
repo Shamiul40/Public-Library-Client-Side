@@ -74,7 +74,7 @@ const BookDetails = () => {
       >
         <div className="flex flex-col md:flex-row">
           <img src={book.image} alt={book.name} className="w-full md:w-1/2 h-96 object-cover rounded-l-lg" />
-          <div className="p-6 space-y-2 md:w-1/2">
+          <div className="p-6 bg-white text-black space-y-2 md:w-1/2">
             <h2 className="text-3xl font-bold">{book.name}</h2>
             <p><strong>Author:</strong> {book.author}</p>
             <p><strong>Category:</strong> {book.category}</p>
@@ -94,7 +94,7 @@ const BookDetails = () => {
 
       {/* Borrow Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black text-white bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-gray-800 p-6 rounded-lg w-96 relative">
             <button className="absolute top-2 right-2 text-xl" onClick={() => setShowModal(false)}>✖</button>
             <h3 className="text-xl font-semibold mb-4">Borrow Book</h3>
@@ -102,7 +102,7 @@ const BookDetails = () => {
               <input type="text" className="input input-bordered w-full" value={user?.displayName} readOnly />
               <input type="email" className="input input-bordered w-full" value={user?.email} readOnly />
               <input type="date" name="returnDate" className="input input-bordered w-full" required />
-              <button type="submit" className="btn btn-success w-full">Confirm Borrow</button>
+              <button type="submit" className="btn border-none bg-[#3749bb] w-full">Confirm Borrow</button>
             </form>
           </div>
         </div>

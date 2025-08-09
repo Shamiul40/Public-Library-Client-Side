@@ -43,7 +43,7 @@ const UpdateBook = () => {
 
   return (
     <div className="flex justify-center my-10">
-      <div className="card bg-base-100 w-full max-w-md shadow-2xl">
+      <div className="card bg-base-100 text-white w-full max-w-md shadow-2xl">
         <div className="card-body">
           <h2 className="text-xl font-semibold text-center">Update Book</h2>
           <form onSubmit={handleUpdate} className="space-y-4">
@@ -58,7 +58,7 @@ const UpdateBook = () => {
               <option value="Sci-Fi">Sci-Fi</option>
             </select>
             <input type="number" step="0.1" name="rating" defaultValue={book.rating} min="1" max="5" className="input input-bordered w-full" placeholder="Rating" required />
-            <button type="submit" className="btn bg-blue-600 text-white w-full">Update Book</button>
+            <button type="submit" className="btn border-none bg-[#3749bb] text-white w-full">Update Book</button>
           </form>
         </div>
       </div>

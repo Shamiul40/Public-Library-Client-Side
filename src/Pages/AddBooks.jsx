@@ -44,7 +44,7 @@ const AddBook = () => {
 
   return (
     <div className="flex justify-center my-10">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="card bg-base-100 text-white w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <h2 className="text-xl font-semibold text-center">Add Book</h2>
           <form onSubmit={handleSubmit} className="space-y-3">
@@ -65,7 +65,7 @@ const AddBook = () => {
             <input className="input input-bordered w-full" value={user?.displayName} readOnly />
             <input className="input input-bordered w-full" value={user?.email} readOnly />
 
-            <button className="btn bg-blue-600 text-white w-full" type="submit">Add Book</button>
+            <button className="btn bg-[#3749bb] border-none text-white w-full" type="submit">Add Book</button>
           </form>
         </div>
       </div>

@@ -51,9 +51,9 @@ const BorrowedBooks = () => {
   return (
     <div className="p-10">
       <h2 className="text-3xl font-bold mb-6 text-center">My Borrowed Books</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {mergedBorrowedBooks.map((book) => (
-          <div key={book._id} className="card bg-base-100 shadow-xl">
+          <div key={book._id} className="card  bg-white text-black shadow-xl">
             <figure>
               <img src={book.image} alt={book.name} className="h-60 w-full object-cover" />
             </figure>
@@ -65,7 +65,7 @@ const BorrowedBooks = () => {
               <div className="card-actions justify-end">
                 <button
                   onClick={() => handleReturn(book)}
-                  className="btn btn-error"
+                  className="btn border-none bg-[#3749bb]"
                 >
                   Return
                 </button>

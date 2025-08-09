@@ -6,7 +6,7 @@ import bannerImg2 from "../assets/image2.jpg";
 import bannerImg3 from "../assets/image3.jpg";
 
 const categoryColors = [
-  "bg-blue-100 hover:bg-blue-200",
+  "bg-[#3749bb]",
   "bg-green-100 hover:bg-green-200",
   "bg-yellow-100 hover:bg-yellow-200",
   "bg-red-100 hover:bg-red-200",
@@ -87,10 +87,10 @@ const HomePage = () => {
               }}
             >
               <div className="text-center px-4 space-y-2">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                <h2 className="text-xl text-[#333333] sm:text-2xl md:text-4xl font-bold">
                   Explore Knowledge
                 </h2>
-                <p className="text-sm md:text-base">
+                <p className="text-sm md:text-base text-[#333333]">
                   Discover books, grow your mind.
                 </p>
               </div>
@@ -99,7 +99,7 @@ const HomePage = () => {
             {/* Left Arrow */}
             <a
               href={`#slide${idx === 0 ? 3 : idx}`}
-              className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 btn btn-circle"
+              className="absolute  left-2 md:left-4 top-1/2 transform -translate-y-1/2 btn btn-circle"
             >
               ❮
             </a>
@@ -107,7 +107,7 @@ const HomePage = () => {
             {/* Right Arrow */}
             <a
               href={`#slide${idx === 2 ? 1 : idx + 2}`}
-              className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 btn btn-circle"
+              className="absolute  right-2 md:right-4 top-1/2 transform -translate-y-1/2 btn btn-circle"
             >
               ❯
             </a>
@@ -126,22 +126,22 @@ const HomePage = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               key={i}
-              className={`${categoryColors[i]} rounded-lg p-6 shadow bg-gray-800 cursor-pointer text-center`}
+              className={`${categoryColors[i]} rounded-lg p-6 shadow  cursor-pointer text-center`}
               onClick={() => navigate(`/category/${cat}`)}
             >
-              <h3 className="text-xl font-bold">{cat}</h3>
-              <p className="text-sm mt-2">Click to explore all {cat} books</p>
+              <h3 className="text-xl text-white font-bold">{cat}</h3>
+              <p className="text-sm text-white mt-2">Click to explore all {cat} books</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Search Input */}
-      <section className="px-6 md:px-16 ">
+      <section className="px-6  md:px-16 ">
         <input
           type="text"
           placeholder="Search by book name, author, or category..."
-          className="w-full max-w-md mx-automb-8 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+          className="w-full max-w-md mx-auto mb-8 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
@@ -180,7 +180,7 @@ const HomePage = () => {
                       Category: {book.category}
                     </p>
                     <button
-                      className="btn btn-sm btn-primary w-full mt-2"
+                      className="btn btn-sm bg-[#3749bb] w-full mt-2"
                       onClick={() => navigate(`/book-details/${book._id}`)}
                     >
                       Details
@@ -205,7 +205,7 @@ const HomePage = () => {
                   <button
                     key={pageNum}
                     className={`btn btn-sm ${
-                      currentPage === pageNum ? "btn-primary" : "btn-outline"
+                      currentPage === pageNum ? "btn bg-[#3749bb]" : "btn-outline"
                     }`}
                     onClick={() => handlePageChange(pageNum)}
                   >
@@ -226,7 +226,7 @@ const HomePage = () => {
       </section>
 
       {/* Extra Section 1 */}
-      <section className="bg-[#00a1e1] py-12 px-6 text-center">
+      <section className="bg-[#3749bb] text-white py-12 px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -235,14 +235,14 @@ const HomePage = () => {
         >
           Join Our Monthly Book Club
         </motion.h2>
-        <p className="max-w-2xl mx-auto text-gray-700">
+        <p className="max-w-2xl mx-auto text-gray-200">
           Engage in exciting discussions, attend virtual events, and meet
           like-minded readers from around the world.
         </p>
       </section>
 
       {/* Extra Section 2 */}
-      <section className="bg-[#00a1e1] py-12 px-6 text-center mb-12">
+      <section className="bg-[#3749bb] text-white py-12 px-6 text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -251,7 +251,7 @@ const HomePage = () => {
         >
           Donate Books & Spread Knowledge
         </motion.h2>
-        <p className="max-w-2xl mx-auto text-gray-700">
+        <p className="max-w-2xl mx-auto text-gray-200">
           Have extra books? Donate today to make education accessible to all.
           Your small effort can make a big impact.
         </p>

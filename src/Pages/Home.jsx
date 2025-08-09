@@ -116,7 +116,7 @@ const HomePage = () => {
       </div>
 
       {/* Category Section */}
-      <section className="px-6 md:px-16 ">
+      <section >
         <h2 className="text-3xl font-bold text-center mb-4">
           Books by Category
         </h2>
@@ -137,11 +137,11 @@ const HomePage = () => {
       </section>
 
       {/* Search Input */}
-      <section className="px-6  md:px-16 ">
+      <section>
         <input
           type="text"
           placeholder="Search by book name, author, or category..."
-          className="w-full max-w-md mx-auto mb-8 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+          className="w-full mx-auto mb-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
@@ -151,7 +151,7 @@ const HomePage = () => {
       </section>
 
       {/* Books List with Pagination */}
-      <section className="px-6 md:px-16">
+      <section>
         <h2 className="text-3xl font-bold mb-6 text-center">Books</h2>
         {filteredBooks.length === 0 ? (
           <p className="text-center text-gray-500">No books found.</p>
@@ -226,7 +226,7 @@ const HomePage = () => {
       </section>
 
       {/* Extra Section 1 */}
-      <section className="bg-[#3749bb] text-white py-12 px-6 text-center">
+      <section className="bg-[#3749bb] rounded-lg text-white py-12 px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +242,7 @@ const HomePage = () => {
       </section>
 
       {/* Extra Section 2 */}
-      <section className="bg-[#3749bb] text-white py-12 px-6 text-center mb-12">
+      <section className="bg-[#3749bb] rounded-lg text-white py-12 px-6 text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -32,25 +32,25 @@ const { user, logOut, loading } = use(AuthContext);
     <>
       <NavLink
         to="/"
-        className={({ isActive }) => (isActive ? "text-[#00a1e1]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#3749bb] " : "")}
       >
         Home
       </NavLink>
       <NavLink
         to="/allBooks"
-        className={({ isActive }) => (isActive ? "text-[#00a1e1]" : "")}
+        className={({ isActive }) => (isActive ?"text-[#3749bb] " : "")}
       >
         All Books
       </NavLink>
       <NavLink
         to="/addBooks"
-        className={({ isActive }) => (isActive ? "text-[#00a1e1]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#3749bb] ": "")}
       >
         Add Books
       </NavLink>
       <NavLink
         to="/borrowedBooks"
-        className={({ isActive }) => (isActive ? "text-[#00a1e1]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#3749bb]": "")}
       >
         Borrowed Books
       </NavLink>
@@ -60,7 +60,7 @@ const { user, logOut, loading } = use(AuthContext);
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar  shadow-lg rounded-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -87,8 +87,8 @@ const { user, logOut, loading } = use(AuthContext);
             {links}
           </ul>
         </div>
-        <a className="text-xl font-bold hidden md:block">
-          Public<span className="text-[#00a1e1]"> Library</span>
+        <a className="text-xl text-[#3749bb] font-bold hidden md:block">
+          Public<span className=""> Library</span>
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -96,13 +96,13 @@ const { user, logOut, loading } = use(AuthContext);
       </div>
       <div className="navbar-end">
         <div className="navbar-end gap-5">
-          <div className="bg-base-200 px-4 py-2 rounded-lg hidden md:block">
+          <div className=" px-4 py-2 rounded-full hidden md:block">
             {user && user.email}
           </div>
 
           {user && (
             <img
-              className="w-12 rounded-full "
+              className="w-12 rounded-full  "
               src={user.photoURL || userImg}
               alt="user"
             />
@@ -111,12 +111,12 @@ const { user, logOut, loading } = use(AuthContext);
           {user ? (
             <button
               onClick={HandleLogOut}
-              className="btn text-white bg-[#00a1e1] px-6 md:px-10"
+              className="py-1 rounded-full text-white bg-[#3749bb] px-4 md:px-10"
             >
               Logout
             </button>
           ) : (
-            <Link to="/auth/login" className="btn text-white bg-[#00a1e1] px-6 md:px-10">
+            <Link to="/auth/login" className="py-1 rounded-full text-white bg-[#3749bb] px-4 md:px-10">
               Login
             </Link>
           )}

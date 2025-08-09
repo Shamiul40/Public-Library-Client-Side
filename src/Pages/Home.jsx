@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
-import bannerImg1 from "../assets/img1.jpg";
-import bannerImg2 from "../assets/img2.jpg";
-import bannerImg3 from "../assets/img2.jpg";
+import bannerImg1 from "../assets/image1.jpg";
+import bannerImg2 from "../assets/image2.jpg";
+import bannerImg3 from "../assets/image3.jpg";
 
 const categoryColors = [
   "bg-blue-100 hover:bg-blue-200",
@@ -79,7 +79,7 @@ const HomePage = () => {
           >
             {/* Banner Content Layer */}
             <div
-              className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white"
+              className="absolute inset-0 bg-opacity-50 flex items-center justify-center text-white"
               style={{
                 backgroundImage: `url(${img})`,
                 backgroundSize: "cover",

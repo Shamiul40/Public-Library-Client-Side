@@ -41,14 +41,14 @@ const AllBooks = () => {
       <h2 className="text-3xl font-bold mb-6 text-center">All Books</h2>
 
       <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
-        <button onClick={handleFilter} className="btn btn-primary">
+        <button onClick={handleFilter} className="btn bg-[#3749bb]">
           {showAvailable ? "Show All Books" : "Show Available Books"}
         </button>
 
         <select
           onChange={handleViewChange}
           value={viewMode}
-          className="select select-bordered w-full max-w-xs"
+          className="select bg-[#3749bb] text-white select-bordered w-full max-w-xs"
         >
           <option value="card">Card View</option>
           <option value="table">Table View</option>
@@ -66,7 +66,7 @@ const AllBooks = () => {
                   className="h-60 w-full object-cover"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body bg-white">
                 <h2 className="card-title">{book.name}</h2>
                 <p><strong>Author:</strong> {book.author}</p>
                 <p><strong>Category:</strong> {book.category}</p>
@@ -74,7 +74,7 @@ const AllBooks = () => {
                 <p><strong>Quantity:</strong> {book.quantity}</p>
                 <div className="card-actions justify-end">
                   <button
-                    className="btn btn-primary"
+                    className="btn border-none bg-[#3749bb]"
                     onClick={() => navigate(`/update-book/${book._id}`)}
                   >
                     Update
